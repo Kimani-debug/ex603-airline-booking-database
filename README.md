@@ -7,4 +7,4 @@ This repo holds an airline booking database
 
 In this project an airline booking database will be created to assist passengers with booking airline flights. The current schema has a Passengers, Flights, Flight_Routes, Bookings, and Airport databases that will hold all the information needed to book the flights.  
 
-![ERD](schemas\erd.png)
+![ERD](schema\erd.png)
