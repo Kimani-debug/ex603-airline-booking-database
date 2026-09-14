@@ -1,5 +1,3 @@
-# Task 1.1: all five relation schemas, their attributes, domains, and primary keys. 
-
 Table Passengers {
   passenger_id integer [primary key]
   first_name varchar [not null]
@@ -15,7 +13,7 @@ Table Flights {
   arrival_location varchar [not null]
   departure_time time
   arrival_time time
-  airport_name varchar [not null, ref: > "Airports"."airport_name"]
+  airport_name varchar
   created_at timestamp
 }
 
