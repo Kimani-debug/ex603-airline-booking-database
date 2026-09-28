@@ -1,5 +1,5 @@
 # The constraints table
-## One row per foreign key. Three columns: the foreign key, the ON DELETE choice, and the ##reason in one sentence. Then, below the table, expand on the choices in prose:
+## One row per foreign key. Three columns: the foreign key, the ON DELETE choice, and the reason in one sentence. Then, below the table, expand on the choices in prose:
 
 |        Foreign Key         | ON DELETE Choice   | reason                                                                                                                                                 |
 | -------------------------- | ------------------ | --------                                                                                                                                               |
