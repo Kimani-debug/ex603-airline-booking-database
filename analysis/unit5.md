@@ -27,12 +27,13 @@ Leadership should re-evalute the need for the two inactive routes since there ar
 
 
 2. Which join algorithms did PostgreSQL choose for your query?
-
+It used the Hash join for bookings to passengers join, and a nested loop for the results.
 
 3. What information in the execution plan helps explain those choices?
-
+The section in the execution plan that is able to do a full scan of the bookings listing, and the memory usage in the hash table being 10kB.
 
 4. Why is it useful to understand the selected join algorithms?
-
+To understand how efficient a schema is running. To understand what queries are running slow.
 
 5. What changes to the data or database might make another join algorithm more appropriate?
+
