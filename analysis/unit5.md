@@ -25,6 +25,7 @@ Leadership should re-evalute the need for the two inactive routes since there ar
 # Task 5.3: Understanding Join Performance and Execution Plans
 1. Give an example of when a Cartesian product could be useful on your platform, or explain why you would not need one.
 
+When tewo lists need to be compared to see all the combinations between the two. For example, looking at the relation between the airports and airport routes. 
 
 2. Which join algorithms did PostgreSQL choose for your query?
 It used the Hash join for bookings to passengers join, and a nested loop for the results.
@@ -36,4 +37,4 @@ The section in the execution plan that is able to do a full scan of the bookings
 To understand how efficient a schema is running. To understand what queries are running slow.
 
 5. What changes to the data or database might make another join algorithm more appropriate?
-
+Data that includes NULLs in the table and not only 0's. 
