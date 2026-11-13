@@ -20,16 +20,8 @@ INNER JOIN bookings b ON b.flight_id = f.flight_id
 GROUP BY f.flight_id
 ORDER BY f.flight_id ASC;
 
--- 3. Compare the results and determine how many producers are excluded by the inner join.
--- 2 flights are excluded from the inner join because the an inner join only
--- 4. Explain which producers are missing and why.
--- Your results must include a count of the producers excluded by the inner join.
-
 
 -- Part B: Explore RIGHT JOIN and FULL OUTER JOIN
---
--- Next, examine the same relationship using two additional join types.
---
 --    1 Write a RIGHT JOIN that returns the same records as your LEFT JOIN from Part A.
 SELECT
     f.flight_id,
@@ -38,7 +30,6 @@ FROM bookings b
 RIGHT JOIN flights f ON b.flight_id = f.flight_id
 GROUP BY f.flight_id
 ORDER BY flight_id ASC;
---    2 Compare the results to confirm that they match.
 
 --    3 Write a FULL OUTER JOIN that includes matching and unmatched records from both tables.
 SELECT
