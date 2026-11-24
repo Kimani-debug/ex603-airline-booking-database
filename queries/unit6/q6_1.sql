@@ -3,7 +3,9 @@
 -- Compare each event to the flights average. Is an event unusual for its own flights?
 -- Return every event with its flights average metric on the same row. Use AVG(...) OVER (PARTITION BY ...).
 SELECT
+    booking_id,
     flight_id,
+    fare_paid,
     AVG(fare_paid) OVER (PARTITION BY flight_id) AS fight_avg_metric
 FROM bookings;
 -- Then write the GROUP BY version and compare: how many rows does each return, and what is lost?
