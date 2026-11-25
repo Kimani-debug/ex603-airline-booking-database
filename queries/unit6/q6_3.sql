@@ -11,6 +11,7 @@ WITH fares AS(
         flight_id,
         booked_at,
         fare_paid,
+        booking_country,
         FIRST_VALUE(fare_paid) OVER (
             PARTITION BY flight_id
             ORDER BY fare_paid DESC
@@ -24,6 +25,7 @@ WITH fares AS(
 SELECT
     flight_id,
     fare_paid,
+    booking_country,
     flight_rank
 FROM fares
 WHERE flight_rank <= 3

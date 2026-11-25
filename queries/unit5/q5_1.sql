@@ -17,6 +17,7 @@ FROM bookings b
 -- Return the flights associated with your theme's catalog tag.
 SELECT
     f.flight_number,
+    fr.flight_id,
     a.iata_code
 FROM flights f
     JOIN flight_routes fr ON f.flight_id = fr.flight_id
